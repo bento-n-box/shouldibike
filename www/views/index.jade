@@ -1,0 +1,92 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8', content='en_US')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+		meta(name='description', content='Sample App')
+	
+		meta(property='og:site_name', content='Sample App')
+		meta(property='og:title', content='Sample App') 
+		meta(property='og:description', content='Sample App')
+		meta(property='og:url', content='Sample App')
+		meta(property='og:image', content='Sample App')
+		meta(property='og:type', content='website')
+		meta(property='og:locale', content='en_US')
+		block headLinks			
+			link(rel='shortcut icon', href='images/favicon.ico')
+			link(rel='stylesheet', href='/css/min/app.min.css')
+	body
+		#wrapper
+			h1 Should I bike to work today?
+			form#locationForm
+				script#formTemplate
+					input(type="text", name="startpoint1" value!="<%= location %>" )
+					input(type="text", name="startpoint2" value!="<%= location %>" )
+					select#firstCommute
+						option(value="12") 12:00 am
+						option(value="1") 1:00 am
+						option(value="2") 2:00 am
+						option(value="3") 3:00 am
+						option(value="4") 4:00 am
+						option(value="5") 5:00 am
+						option(value="6") 6:00 am
+						option(value="7") 7:00 am
+						option.default(value="8", selected) 8:00 am
+						option(value="9") 9:00 am
+						option(value="10") 10:00 am
+						option(value="11") 11:00 am
+						option(value="12") 12:00 pm
+						option(value="1") 1:00 pm
+						option(value="2") 2:00 pm
+						option(value="3") 3:00 pm
+						option(value="4") 4:00 pm
+						option(value="5") 5:00 pm
+						option(value="6") 6:00 pm
+						option(value="7") 7:00 pm
+						option(value="8") 8:00 pm
+						option(value="9") 9:00 pm
+						option(value="10") 10:00 pm
+						option(value="11") 11:00 pm
+					select#firstDirection
+						option(value="North") North
+						option(value="South") South
+						option(value="East") East
+						option(value="West") West
+					select#secondCommute
+						option(value="12") 12:00 am
+						option(value="1") 1:00 am
+						option(value="2") 2:00 am
+						option(value="3") 3:00 am
+						option(value="4") 4:00 am
+						option(value="5") 5:00 am
+						option(value="6") 6:00 am
+						option(value="7") 7:00 am
+						option(value="8") 8:00 am
+						option(value="9") 9:00 am
+						option(value="10") 10:00 am
+						option(value="11") 11:00 am
+						option(value="12") 12:00 pm
+						option(value="1") 1:00 pm
+						option(value="2") 2:00 pm
+						option(value="3") 3:00 pm
+						option(value="4") 4:00 pm
+						option(value="5") 5:00 pm
+						option.default(value="6", selected) 6:00 pm
+						option(value="7") 7:00 pm
+						option(value="8") 8:00 pm
+						option(value="9") 9:00 pm
+						option(value="10") 10:00 pm
+						option(value="11") 11:00 pm
+					select#secondDirection
+						option(value="North") North
+						option(value="South") South
+						option(value="East") East
+						option(value="West") West
+						
+					button#getWeather Submit
+					
+
+
+
+	script(type="text/javascript", data-main="js/app/main", src="js/lib/require.js")
